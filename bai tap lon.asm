@@ -4,7 +4,7 @@ org 100h
 .data
     color db 1    ; Variable to store color value
     
-    m1 db 219, 0, 219, 0, 219, 0, 219, 0, 219, 0, 219, 0, 219, 0, 219, 0    ; String to be printed
+    str db 219, 0, 219, 0, 219, 0, 219, 0, 219, 0, 219, 0, 219, 0, 219, 0    ; String to be printed
           
 
 .code
@@ -53,7 +53,7 @@ main proc
         mov al, 1    ; Set AL to 1 to print the entire string
         mov bl, color   ; Set BL to the desired color value for printing
         mov cx, 16    ; Length of the string
-        lea bp, m1    ; Set the buffer pointer to the string
+        lea bp, str    ; Set the buffer pointer to the string
         int 10h    ; Call BIOS interrupt to print the string
         ret       
     printString endp
