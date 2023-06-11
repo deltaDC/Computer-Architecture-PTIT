@@ -5,7 +5,7 @@
     
     PORT_CONTROL equ 06h   ; port control signal
     
-    LED_DELAY equ 60000    ; delay value
+    LED_DELAY equ 50000    ; delay value
 
 .code
 main proc
